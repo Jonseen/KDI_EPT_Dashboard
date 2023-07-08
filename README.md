@@ -1,3 +1,3 @@
 ## About KDI EPT DASHBOARD
 
-A Election Petition Dashboard developed by Kimpact Development Initiative
+An Election Petition Tribunal Dashboard developed for Kimpact Development Initiative
