@@ -1,0 +1,426 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+/* ROOT VARIABLES  */
+:root {
+    /* --color-primary: rgb(115, 128, 236); */
+    --color-primary: #7380ec;
+    --color-primary2: #7380ec;
+    --color-danger: #ea2b3b;
+    --color-success: #24e77c;
+    --color-warning: #f5a734;
+    --color-white: #fff;
+    --color-white2: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-dark2: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
+    --color-primary-variant2: #111e88;
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)), url(/assets/images/background2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.container img {
+    width: 6rem;
+    margin-bottom: .5rem;
+}
+.form-box {
+    width: 100%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color-white);
+    padding: 50px 60px 70px;
+    text-align: center;
+}
+.form-box h2{
+    
+    /* margin-bottom: 60px; */
+    color: var(--color-dark);
+    position: relative;
+}
+.welcome-box {
+    display: flex;
+    justify-content: center;
+    /* padding: 10% 10% 0 0; */
+
+
+    /* align-items: center; */
+    /* margin: 0 auto; */
+    /* background-color: #999; */
+    width: 100vw;
+    height: 100vh; 
+    padding-top: 10%;
+   
+}
+/* .welcome-box .gavel {
+    padding: 0;
+    width: 50px;
+} */
+.welcome-box h2 span {
+    font-size: 300px;
+    opacity: 0.5;
+    color: var(--color-white);
+    margin:0 auto;
+}
+.welcome-box .gavel img {
+    width: 200px;
+    height: 200px;
+    /* margin-left: 15rem; */
+    border: 1px solid var(--color-white);
+    box-shadow: inset 0 0 10px #f8a100;
+    margin-right: 2rem;
+    border-radius: 3%;
+    transition: all 350ms ease;
+}
+.welcome-box .gavel img:hover {
+    box-shadow: inset 0 0 10px var(--color-primary);
+    border-radius: 5%;
+    border: 2px solid var(--color-primary);
+}
+.welcome-box .welcome {
+    color: var(--color-white);
+    width: 40rem;
+    text-align: left;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.welcome-loading {
+    display: flex;
+    justify-content: left;
+    color: var(--color-white);
+    margin-top: 30vh;
+text-align: left;
+}
+.welcome-loading img {
+    width: 45px;
+    margin-right: 1rem;
+
+}
+.welcome-box .btn-field {
+    /* background: var(--color-white); */
+    padding: var(--padding-1);
+    /* border-radius: var(--border-radius-1); */
+    color: var(--color-primary);
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    transition: all 350ms ease;
+}
+.welcome-box .btn-field:hover {
+    background: none;
+    border: 2px solid var(--color-primary);
+    /* box-shadow: inset 0 0 10px var(--color-primary); */
+}
+.welcome-box .btn-field a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+.welcome-box .btn-field span {
+    font-weight: 600;
+    font-size: 30px;
+}
+.form-box h1::after {
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: var(--color-primary);
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.input-field {
+    background: #eaeaea;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+}
+
+.input-field span {
+    margin-left: 15px;
+    color: #999;
+}
+
+form p {
+    text-align: left;
+    font-size: 13px;
+}
+
+form p a {
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+.btn-field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-field button {
+    flex-basis: 48%;
+    background: var(--color-primary);
+    color: #fff;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+}
+.btn-field button a{
+    text-decoration: none;
+    /* color: var(--color-dark-variant); */
+}
+.input-group {
+    height: 280px;
+}
+
+.btn-field button.disable {
+    background: #eaeaea;
+    color: #555;
+}
+
+.googleLogin {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2rem;
+    width: 100%;
+    font-size: 13px;
+    text-align: center;
+    color: #555;
+    font-weight: 500;
+}
+.googleLogin a img{
+    width: 20px;
+    height: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 100%;
+        height: 100vh;
+        /* background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)), url(images/background2.jpg); */
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+    .container img {
+        width: 100%;
+        margin-bottom: .5rem;
+    }
+    .welcome-box {
+        display: flex;
+        justify-content: center;
+        width: 90vw;
+        height: 100vh; 
+        padding-top: 10%;
+       
+    }
+    .welcome-box h2 span {
+        font-size: 300px;
+        opacity: 0.5;
+        color: var(--color-white);
+        margin:0 auto;
+    }
+    .welcome-box .gavel img {
+        width: 200px;
+        height: 200px;
+       
+        border: 1px solid var(--color-white);
+        box-shadow: inset 0 0 10px #f8a100;
+        /* margin-right: 2rem; */
+        border-radius: 3%;
+        transition: all 350ms ease;
+    }
+    .welcome-box .gavel img:hover {
+        box-shadow: inset 0 0 10px var(--color-primary);
+        border-radius: 5%;
+        border: 2px solid var(--color-primary);
+    }
+    .welcome-box .welcome {
+        color: var(--color-white);
+        width: 40rem;
+        text-align: left;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    .welcome-loading {
+        display: flex;
+        justify-content: left;
+        color: var(--color-white);
+        margin-top: 30vh;
+    text-align: left;
+    }
+    .welcome-loading img {
+        width: 45px;
+        margin-right: 1rem;
+    
+    }
+    .welcome-box .btn-field {
+        /* background: var(--color-white); */
+        padding: var(--padding-1);
+        /* border-radius: var(--border-radius-1); */
+        color: var(--color-primary);
+        width: 50%;
+        text-align: center;
+        align-items: center;
+        transition: all 350ms ease;
+    }
+    .welcome-box .btn-field:hover {
+        background: none;
+        border: 2px solid var(--color-primary);
+        /* box-shadow: inset 0 0 10px var(--color-primary); */
+    }
+    .welcome-box .btn-field a {
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--color-primary);
+    }
+    .welcome-box .btn-field span {
+        font-weight: 600;
+        font-size: 30px;
+    }
+
+
+@media screen and (max-width: 782px) {
+    .container {
+        width: 100%;
+        height: 100vh;
+        /* background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)), url(images/background2.jpg); */
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        text-align: center;
+    }
+    .container img {
+        width: 90%;
+        margin-bottom: .5rem;
+    }
+    .welcome-box {
+        display: block;
+        /* justify-content: center; */
+        /* padding: 10% 10% 0 0; */
+        text-align: center;
+    
+        /* align-items: center; */
+        /* margin: 0 auto; */
+        /* background-color: #999; */
+        width: 100vw;
+        height: 100vh; 
+        padding-top: 10%;
+       
+    }
+   
+    .welcome-box h2 span {
+        font-size: 200px;
+        opacity: 0.5;
+        color: var(--color-white);
+        margin:0 auto;
+    }
+    .welcome-box .gavel img {
+        width: 200px;
+        height: 200px;
+        margin-left: 2rem;
+        border: 1px solid var(--color-white);
+        box-shadow: inset 0 0 10px #f8a100;
+        /* margin-right: 2rem; */
+        border-radius: 3%;
+        transition: all 350ms ease;
+    }
+    .welcome-box .gavel img:hover {
+        box-shadow: inset 0 0 10px var(--color-primary);
+        border-radius: 5%;
+        border: 2px solid var(--color-primary);
+    }
+    .welcome-box .welcome {
+        color: var(--color-white);
+        width: 100vw;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .welcome-loading {
+        display: block;
+        justify-content: center;
+        color: var(--color-white);
+        margin-top: 20vh;
+    text-align: center;
+    }
+    .welcome-loading img {
+        width: 45px;
+        margin-right: 1rem;
+    
+    }
+    .welcome-box .btn-field {
+        /* background: var(--color-white); */
+        padding: var(--padding-1);
+        /* border-radius: var(--border-radius-1); */
+        color: var(--color-primary);
+        width: 50%;
+        text-align: center;
+        align-items: center;
+        transition: all 350ms ease;
+    }
+    .welcome-box .btn-field:hover {
+        background: none;
+        border: 2px solid var(--color-primary);
+        /* box-shadow: inset 0 0 10px var(--color-primary); */
+    }
+    .welcome-box .btn-field a {
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--color-primary);
+    }
+    .welcome-box .btn-field span {
+        font-weight: 600;
+        font-size: 30px;
+    }
+}}
